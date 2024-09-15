@@ -31,6 +31,7 @@ const App = () => {
       ) : (
         <BrowserRouter>
           <Header isAuth={isAuth} />
+          <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -89,6 +90,7 @@ const App = () => {
               element={isAuth ? <AdminUsers user={user} /> : <Login />}
             />
           </Routes>
+          </main>
           <Footer />
         </BrowserRouter>
       )}

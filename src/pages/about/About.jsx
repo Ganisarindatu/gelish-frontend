@@ -5,7 +5,7 @@ const About = () => {
     <div className="about">
       <div className="about-content">
         <h2>About Us</h2>
-        <p>
+        <p className="p-about">
           We are dedicated to providing high quality online courses to help
           individuals learn and grow in their desired fields. Our experienced
           instruction ensure that each course is tailored for effective learning

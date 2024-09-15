@@ -11,7 +11,7 @@ const Home = () => {
       <div className="home">
         <div className="home-content">
           <h1>Welcome to Gelish</h1>
-          <p>Learn, Grow, Improve</p>
+          <h5>Learn, Grow, Improve</h5>
           <button onClick={() => navigate("/courses")} className="common-btn">
             Get Started
           </button>

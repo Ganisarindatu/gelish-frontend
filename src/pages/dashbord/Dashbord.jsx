@@ -37,7 +37,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <h2>My Courses</h2>
+      <h2 align="center">My Courses</h2>
       <div className="course-container">
         {mycourse && mycourse.length > 0 ? (
           mycourse.map((course) => (

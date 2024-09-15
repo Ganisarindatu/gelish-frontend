@@ -82,6 +82,7 @@ const CourseCard = ({ course }) => {
             <button
               onClick={() => navigate(`/course/study/${course._id}`)}
               className="common-btn"
+              style={{ background: "#86AB89" }}
             >
               Edit
             </button>
@@ -99,7 +100,7 @@ const CourseCard = ({ course }) => {
         <button
           onClick={() => deleteHandler(course._id)}
           className="common-btn"
-          style={{ background: "red" }}
+          style={{ background: "#C51605" }}
         >
           Delete
         </button>

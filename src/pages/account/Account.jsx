@@ -57,7 +57,7 @@ const Account = ({ user }) => {
             <button
               onClick={logoutHandler}
               className="common-btn"
-              style={{ background: "red" }}
+              style={{ background: "#A25772" }}
             >
               <IoMdLogOut />
               Logout

@@ -1,33 +1,97 @@
 .home {
-  background-color: #f5f5f5;
+  background-color: #EEF5FF;
   padding: 100px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: none; /* Menghilangkan animasi gradien */
+  padding-bottom: 150px;
+  color: #333;
+}
 
-  .home-content {
-    max-width: 800px;
-    margin: 0 auto;
+/* .home::before,
+.home::after {
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  background: rgba(124, 147, 195, 0.5); /* Warna bola dengan transparansi */
+  /* z-index: 0;
+  filter: blur(100px); /* Efek blur */
+ */
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
+.home::before {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+  background-color: rgba(162, 87, 114, 0.5); /* Warna A25772 */
+}
 
-      @media (max-width: 768px) {
-        font-size: 28px;
-      }
-    }
+.home::after {
+  width: 400px;
+  height: 400px;
+  bottom: -150px;
+  right: -150px;
+  background-color: rgba(156, 184, 217, 0.5); /* Warna 9EB8D9 */
+}
 
-    p {
-      font-size: 18px;
-      color: #666;
-      margin-bottom: 40px;
+.home-content {
+  position: relative;
+  z-index: 1; /* Konten di atas efek bola */
+  background: rgba(255, 255, 255, 0.3); /* Efek glassy */
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.5s ease;
+  color: #333;
+}
 
-      @media (max-width: 768px) {
-        font-size: 16px;
-      }
-    }
+.home-content:hover {
+  transform: scale(1.05);
+}
 
-    button {
-      padding: 12px 24px;
-    }
+h1 {
+  font-size: 48px;
+  color: #333; /* Warna teks lebih gelap untuk keterbacaan */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Efek bayangan terang */
+}
+
+h5{
+  font-size: 24px;
+  color: #333; /* Warna teks lebih gelap */
+  margin-bottom: 40px;
+  
+}
+
+.common-btn {
+  background-color: #7C93C3;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.common-btn:hover {
+  background-color: #A25772;
+  box-shadow: 0 8px 16px rgba(162, 87, 114, 0.3);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 18px;
   }
 }

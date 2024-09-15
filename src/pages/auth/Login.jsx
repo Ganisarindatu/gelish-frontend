@@ -42,7 +42,7 @@ const Login = () => {
             {btnLoading ? "Please Wait..." : "Login"}
           </button>
         </form>
-        <p>
+        <p className="don">
           Don't have an account? <Link to="/register">Register</Link>
         </p>
         <p>

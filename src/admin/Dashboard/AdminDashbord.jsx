@@ -35,16 +35,16 @@ const AdminDashbord = ({ user }) => {
     <div>
       <Layout>
         <div className="main-content">
-          <div className="box">
-            <p>Total Courses</p>
+          <div className="box-dash">
+            <p>Total Courses</p><br /><br />
             <p>{stats.totalCoures}</p>
           </div>
-          <div className="box">
-            <p>Total Lectures</p>
+          <div className="box-dash">
+            <p>Total Lectures</p><br /><br />
             <p>{stats.totalLectures}</p>
           </div>
-          <div className="box">
-            <p>Total Users</p>
+          <div className="box-dash">
+            <p>Total Users</p><br /><br />
             <p>{stats.totalUsers}</p>
           </div>
         </div>

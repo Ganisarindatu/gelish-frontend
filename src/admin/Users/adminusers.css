@@ -1,0 +1,64 @@
+
+.users {
+  padding: 20px;
+  /* Solid background color */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); */
+  border-radius: 10px;
+ margin-left:300px; 
+ margin-bottom: 10%;
+ height: none;
+ width: none;
+}
+
+.users h1 {
+  font-size: 2rem;
+  color: #A25772; /* Title color */
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.9); /* Glassy effect */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Elevated shadow */
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+thead {
+  background-color: #A25772; /* Header background color */
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Subtle row divider */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #EEF5FF; /* Row color for even rows */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #FFFFFF; /* Row color for odd rows */
+}
+
+button.common-btn {
+  background-color: #7C93C3; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.common-btn:hover {
+  background-color: #A25772; /* Button hover color */
+}

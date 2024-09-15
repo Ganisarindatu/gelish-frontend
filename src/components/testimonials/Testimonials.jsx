@@ -51,7 +51,7 @@ const Testimonials = () => {
             <p className="message">{e.message}</p>
             <div className="info">
               <p className="name">{e.name}</p>
-              <p className="position">{e.position}</p>
+              <h4 className="position">{e.position}</h4>
             </div>
           </div>
         ))}

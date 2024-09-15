@@ -76,12 +76,12 @@ const CourseDescription = () => {
               <div className="course-info">
                 <h2>{course.title}</h2>
                 <p>Instructor: {course.createdBy}</p>
-                <p>Duration: {course.duration} weeks</p>
+                <p >Duration: {course.duration} Hours</p>
+                <p>{course.description}</p>
+            <p>Enroll in this course for free!</p>
               </div>
             </div>
-
-            <p>{course.description}</p>
-            <p>Enroll in this course for free!</p>
+            
 
             {/* Check if user has already enrolled in the course */}
             {user && user.enrolledCourses.includes(course._id) ? (

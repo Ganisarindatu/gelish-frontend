@@ -1,41 +1,134 @@
+/* Main container for the auth page */
 .auth-page {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 80vh;
-  background-color: white;
+  background-color: #eef5ff; /* Light background color */
+  position: relative; /* For the triangle effect */
+}
 
-  .auth-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
+/* Style for the form container */
+.auth-form {
+  background-color: rgba(255, 255, 255, 0.9); /* Glassy effect with slight transparency */
+  padding: 30px;
+  border-radius: 15px; /* More rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow effect */
+  text-align: center;
+  width: 300px;
+  backdrop-filter: blur(10px); /* Glass effect with blur */
+  position: relative; /* For positioning the pseudo-element */
+  overflow: hidden; /* Hide overflow to maintain clean edges */
 
-    h2 {
-      font-size: 24px;
-      color: #8a4baf;
-      margin-bottom: 15px;
-    }
+}
 
-    form {
-      text-align: left;
+/* Header style */
+.auth-form h2 {
+  font-size: 25px;
+  color: #7c93c3; /* Primary color */
+  margin-bottom: 15px;
 
-      label {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 14px;
-        color: #333;
-      }
+}
 
-      input {
-        width: 92%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-    }
+/* Form style */
+.auth-form form {
+  text-align: left;
+}
+
+/* Label style */
+.auth-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Input style */
+.auth-form input {
+  width: 92%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #9eb8d9; /* Input border color */
+  border-radius: 5px;
+  background-color: #fff; /* White background for inputs */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition effect */
+}
+
+/* Input hover and focus effects */
+.auth-form input:hover,
+.auth-form input:focus {
+  border-color: #a25772; /* Darker border color on hover/focus */
+  box-shadow: 0 0 5px rgba(162, 87, 114, 0.3); /* Shadow effect */
+}
+
+/* Button style */
+.auth-form button {
+  background-color: #7c93c3; /* Primary color for button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.auth-form button:hover {
+  background-color: #a25772; /* Darker button color on hover */
+}
+
+/* Link style */
+.auth-form p a {
+  color: #7c93c3; /* Link color */
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+/* Link hover effect */
+.auth-form p a:hover {
+  color: #a25772; /* Darker color on hover */
+}
+
+/* Pseudo-element for the blurred triangle effect */
+.auth-page::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2); /* Light overlay */
+  filter: blur(50px); /* Blur effect */
+  transform: translate(-50%, -50%) rotate(45deg); /* Centered and rotated */
+  border-radius: 50%; /* Circular shape */
+  z-index: -1; /* Place behind the form */
+  pointer-events: none; /* Ignore pointer events */
+}
+
+/* Animation for the form */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
   }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Applying animation */
+.auth-form {
+  animation: fadeIn 0.8s ease-in-out;
+  color: #333;
+}
+.don{
+  color: #333;
+}
+ .auth-page .auth-form p {
+  color: #333;
+  font-size: 15px;
+  font-style: normal;
+  font-family: sans-serif;
 }

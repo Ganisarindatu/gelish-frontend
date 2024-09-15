@@ -1,12 +1,21 @@
 .sidebar {
-  width: 200px;
-  height: 100%;
+  background-color: #EEF5FF; /* Background color for sidebar */
+  backdrop-filter: blur(10px); /* Glassy effect */
+  width: 300px;
+  height: calc(100vh - 60px); /* Adjust height to fit between header and footer */
+  top: 60px; /* Adjust based on header height */
   left: 0;
-  color: white;
-  border-right: 1px solid gray;
-
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #7C93C3; /* Text color */
+  padding-top: 20px;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  
   @media (max-width: 768px) {
-    width: 30px;
+    width: 60px; /* Adjusted for mobile view */
+    height: calc(100vh - 60px); /* Adjust for mobile header height */
+    top: 60px; /* Adjust for mobile header height */
   }
 
   ul {
@@ -14,28 +23,36 @@
     padding: 0;
 
     li {
+      background-color: #7C93C3; /* Background color for list items */
       margin-bottom: 10px;
       cursor: pointer;
       padding: 12px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
 
       @media (max-width: 768px) {
         padding: 7px;
       }
 
       &:hover {
-        background-color: gray;
+        background-color: #A25772; /* Hover color for list items */
+        box-shadow: 0 8px 16px rgba(124, 147, 195, 0.4);
       }
 
       a {
         display: flex;
+        align-items: center;
         text-decoration: none;
-        counter-reset: blueviolet;
+        color: #ffffff; /* Link color */
+        transition: color 0.3s ease;
 
         span {
           margin-left: 15px;
 
           @media (max-width: 768px) {
-            display: none;
+            display: none; /* Hide text on mobile view */
           }
         }
       }
@@ -43,8 +60,35 @@
   }
 }
 
+.sidebar::before,
+.sidebar::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3); /* Light color for blur balls */
+  backdrop-filter: blur(30px); /* Blur effect for balls */
+  z-index: -1;
+  pointer-events: none;
+}
+
+.sidebar::before {
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  left: 20%;
+  transform: scale(0.8);
+}
+
+.sidebar::after {
+  width: 120px;
+  height: 120px;
+  bottom: 15%;
+  right: 25%;
+  transform: scale(1.2);
+}
+
 .dashboard-admin {
   display: flex;
-  min-height: 80vh;
+  min-height: calc(100vh - 60px); /* Adjust to fit between header and footer */
   margin-top: 20px;
 }

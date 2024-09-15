@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import { useEffect, useState } from "react";
-import "./users.css";
+import "./adminusers.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { server } from "../../main";

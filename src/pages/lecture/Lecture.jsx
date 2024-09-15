@@ -206,16 +206,18 @@ const Lecture = ({ user }) => {
                 </>
               )}
             </div>
-            <div className="right">
+            <div className="right"> 
               {user && user.role === "admin" && (
                 <button className="common-btn" onClick={() => setShow(!show)}>
-                  {show ? "Close" : "Add Lecture +"}
-                </button>
+                  {show ? "Close"  : "Add Lecture +"}
+                </button> 
               )}
+              <br /> <br />
 
               {show && (
+
                 <div className="lecture-form">
-                  <h2>Add Lecture</h2>
+                  <h2 >Add Lecture</h2>
                   <form onSubmit={submitHandler}>
                     <label htmlFor="text">Title</label>
                     <input
@@ -248,7 +250,7 @@ const Lecture = ({ user }) => {
                         controls
                       ></video>
                     )}
-
+                    <br /><br />
                     <button
                       disabled={btnLoading}
                       type="submit"
@@ -297,7 +299,7 @@ const Lecture = ({ user }) => {
                   </>
                 ))
               ) : (
-                <p>No Lectures Yet!</p>
+                <p className="p-nolec">No Lectures Yet!</p>
               )}
             </div>
           </div>

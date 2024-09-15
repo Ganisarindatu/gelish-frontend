@@ -1,20 +1,103 @@
 .main-content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Align boxes to the top of the page */
   flex-wrap: wrap;
+  min-height: 100vh;
+  gap: 60px; /* Increased space between the boxes */
+  padding-top: 50px; /* Add top padding to center vertically */
+}
 
-  .box {
-    margin-left: 20px;
-    background-color: #8a4baf;
-    padding: 5px;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 5px;
-    color: white;
+/* Glassy box styles with different colors */
+.box-dash {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1); /* Glassy effect */
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  height: 240px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  backdrop-filter: blur(10px); /* Background blur for glassy effect */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
 
-    &:hover {
-      background-color: #432456;
-    }
-  }
+.box-dash:hover {
+  transform: translateY(-10px); /* Hover effect */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+}
+
+/* Assign different background colors for each box */
+.box-dash:nth-child(1) {
+  background-color: #A25772; /* #A25772 with transparency */
+}
+
+.box-dash:nth-child(2) {
+  background-color: #9EB8D9; /* #7C93C3 with transparency */
+}
+
+.box-dash:nth-child(3) {
+  background-color: #A2C579; /* #C0C78C with transparency */
+}
+
+/* Bubble effect inside each box */
+.box-dash::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: -40px;
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  filter: blur(30px);
+  z-index: -1;
+}
+
+.box-dash::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+p {
+  margin: 10px 0;
+}
+
+p:first-child {
+  font-size: 24px; /* Larger font for titles */
+  font-weight: bold;
+}
+
+p:last-child {
+  font-size: 36px; /* Larger font for numbers */
+}
+
+/* Adjust the text color to white and increase the font size */
+p {
+  margin: 10px 0;
+  color: white; /* Set text color to white */
+}
+
+/* First paragraph (title) - make the font slightly larger */
+p:first-child {
+  font-size: 26px; /* Slightly larger font for titles */
+  font-weight: bold;
+}
+
+/* Last paragraph (numbers) - increase font size */
+p:last-child {
+  font-size: 38px; /* Slightly larger font for numbers */
+  font-weight: bold;
 }
