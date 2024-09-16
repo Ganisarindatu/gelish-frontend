@@ -277,7 +277,7 @@ const Lecture = ({ user }) => {
                         progress[0].completedLectures.includes(e._id) && (
                           <span
                             style={{
-                              background: "red",
+                              background: "#A25772",
                               padding: "2px",
                               borderRadius: "6px",
                               color: "greenyellow",
@@ -290,7 +290,7 @@ const Lecture = ({ user }) => {
                     {user && user.role === "admin" && (
                       <button
                         className="common-btn"
-                        style={{ background: "red" }}
+                        style={{ background: "#A25772" }}
                         onClick={() => deleteHandler(e._id)}
                       >
                         Delete {e.title}

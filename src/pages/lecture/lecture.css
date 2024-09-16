@@ -61,27 +61,9 @@
       margin-bottom: 10px;
     }
 
-    .lecture-number {
-      background-color: #fff;
-      padding: 10px;
-      border: 1px solid black;
-      margin-top: 10px;
-      border-radius: 5px;
-      text-align: center;
-      cursor: pointer;
+   
 
-      &:hover {
-        background-color: #7C93C3;
-        color: white;
-      }
-    }
-
-    .active {
-      background-color: #7C93C3;
-      color: white;
-    }
-  }
-}
+  }}
 
 .progress {
   width: 20%;
@@ -169,4 +151,29 @@ label {
 h1, h3 {
   color: #333; /* Adjusting text color */
   margin-top: 10px;
+}
+
+.lecture-number {
+  background-color: #fff;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(124, 147, 195, 0.4); /* Efek timbul shadow dengan #7C93C3 */
+  transition: all 0.3s ease;
+  color: #7C93C3;
+  border: 2px solid #7C93C3; /* Membuat efek garis dengan warna yang sesuai */
+}
+
+.lecture-number:hover {
+  background-color: rgba(124, 147, 195, 0.2); /* Efek hover dengan glassy look */
+  box-shadow: 0 8px 15px rgba(124, 147, 195, 0.6); /* Membuat bayangan lebih besar */
+}
+
+.lecture-number:active {
+  background-color: #A25772; /* Warna berubah saat aktif */
+  color: #fff; /* Teks menjadi putih saat tombol aktif */
+  box-shadow: 0 0 20px rgba(162, 87, 114, 0.8); /* Efek glow dengan warna #A25772 */
+  transform: scale(0.98); /* Sedikit mengecil saat ditekan */
 }

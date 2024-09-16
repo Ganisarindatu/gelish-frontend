@@ -1,43 +1,50 @@
 import "./testimonials.css";
+import student1 from "./pict/student 1.jpg";
+import student2 from "./pict/student 2.jpg";
+import student3 from "./pict/student 3.jpg";
+import student4 from "./pict/student 4.jpg";
+import student5 from "./pict/student 5.jpg";
 
 const Testimonials = () => {
   const testimonialsData = [
     {
       id: 1,
-      name: "John Doe",
-      position: "Student",
+      name: "Sofi",
+      position:"Student",
       message:
-        "This platform helped me learn so effectively. The courses are amazing and the instructors are top-notch.",
+        "Keren banget Kak Ganis ngejelasinnya lancar dan aku jadi gampang paham sama pelajaran yang diajar. Pokoknya best lah !",
       image:
-        "https://th.bing.com/th?q=Current+Bachelor&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247",
+        student1,
     },
     {
       id: 2,
-      name: "Jane Smith",
+      name: "Nadia",
       position: "Student",
       message:
-        "I've learned more here than in any other place. The interactive lessons and quizzes make learning enjoyable.",
-      image:
-        "https://th.bing.com/th/id/OIP.GKAiW3oc2TWXVEeZAzrWOAHaJF?w=135&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-    },
-    {
+        "Belum ada 1 bulan belajar di platform ini, tapi aku udah bisa ngomong pake bahasa Inggris. Menyimak pelajaran dari Kak Ganis seseru itu ternyata.",
+      image: student2
+     },
+      {
       id: 3,
-      name: "John Doe",
+      name: "Sulis",
       position: "Student",
       message:
-        "This platform helped me learn so effectively. The courses are amazing and the instructors are top-notch.",
-      image:
-        "https://th.bing.com/th?q=Current+Bachelor&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247",
-    },
+        "Kenapa aku gk dari dulu aja belajar di sini. Belajar di sini bikin candu dan video-videonya menarik banget.",
+      image: student3},
     {
       id: 4,
-      name: "Jane Smith",
+      name: "Ira",
       position: "Student",
       message:
-        "I've learned more here than in any other place. The interactive lessons and quizzes make learning enjoyable.",
-      image:
-        "https://th.bing.com/th/id/OIP.GKAiW3oc2TWXVEeZAzrWOAHaJF?w=135&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-    },
+        "Ini serius platform gratis? waah materinya daging semua. Makasi Kak Ganis",
+      image: student4},
+    {
+      id: 5,
+      name: "Rani",
+      position: "Student",
+      message:
+        "Aku butuh materi baru lagi kak. Saking enjoynya semua materi udah aku tonton semua. Kak Ganis jago banget ngejelasinnya bikin betah belajar",
+      image: student5 },
   ];
   return (
     <section className="testimonials">
@@ -48,10 +55,10 @@ const Testimonials = () => {
             <div className="student-image">
               <img src={e.image} alt="" />
             </div>
-            <p className="message">{e.message}</p>
-            <div className="info">
               <p className="name">{e.name}</p>
               <h4 className="position">{e.position}</h4>
+            <p className="message">{e.message}</p>
+            <div className="info">
             </div>
           </div>
         ))}

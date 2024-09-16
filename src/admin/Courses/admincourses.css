@@ -6,20 +6,19 @@
   background: #EEF5FF; /* Light background for the entire section */
 }
 
-.left, .right {
-  flex: 1;
-}
-
 .left {
+  flex: 1;
   .dashboard-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-direction: row; /* Ensures cards are in a row */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    gap: 2rem; /* Spacing between cards */
+    align-items: flex-start; /* Aligns items at the top */
   }
 }
 
 .right {
+  flex: 1;
   .add-course {
     display: flex;
     justify-content: center;

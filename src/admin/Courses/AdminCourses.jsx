@@ -11,9 +11,7 @@ import axios from "axios";
 import { server } from "../../main";
 
 const categories = [
-  "Grammer",
-  "Speaking",
-  "Vocabularies",
+  "English",
   "Technology",
   "Economy",
 ];

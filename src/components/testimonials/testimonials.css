@@ -1,5 +1,6 @@
 .testimonials {
-  padding: 80px 0;
+  padding: 20px 0;
+  margin-top: 0%;
   text-align: center;
   position: relative;
   background-color: #EEF5FF; /* Latar belakang dengan warna lembut */
@@ -62,6 +63,7 @@
 
 .info {
   text-align: center;
+  font-size: 20px ;
 }
 
 .name {
@@ -72,8 +74,10 @@
 }
 
 .position {
-  font-size: 1px;
+  font-size: 18px;
   color: #666;
+  padding: 0;
+  margin: 0;
 }
 
 /* Responsif */
