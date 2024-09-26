@@ -64,7 +64,7 @@ const CourseCard = ({ course }) => {
                 onClick={() => handleEnroll(course._id)}
                 className="common-btn enroll-btn"
               >
-                Enroll
+                Enrolled
               </button>
 
 
